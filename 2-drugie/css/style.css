@@ -13,26 +13,20 @@
 }
 
 #blue {
-    background-color: blue;
-    
+    background-color: blue;  
 }
 
 #green {
     background-color: green;
 }
 
-
 #red:hover {
     width: 300px;
 }
 
-
-
 #blue:hover {
     height: 300px;
 }
-
-
 
 #green:hover {
     width: 300px;
