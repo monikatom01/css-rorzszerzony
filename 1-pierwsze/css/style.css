@@ -120,4 +120,17 @@ input[title^="pie"] {
 input[title$="ci"] {
     border: 3px solid brown;
 }
+/*float*/
 
+.floated-inner {
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    float: left;
+}
+/*aby przywrucic float dokumenty (bo liczy wielkosc rodzica tylko z elementow oplywajacych) :
+.clear {
+clear: both; 
+(na ostatnim elemencie oplywajacym tu np <div class="clear"></div>)
+trzeba wylaczyc float - jeslil elenenty oplywajace nie oplywaja elementu do koca
+*/
