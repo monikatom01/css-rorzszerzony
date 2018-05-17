@@ -25,3 +25,64 @@ ul li::first-letter {
 #main-header .header-inner p::first-line {
     color: blue;
 }
+
+/*     pseudo klasy:     */
+
+/* jerzezli podpinamy pseudo klase do elementu link (a) pamietamy o porzadku:
+1 nieodwiedzone
+2 odwiedzone
+3 hover
+4 aktywne: ;*/
+
+a:link {
+    color: pink;
+}
+a:visited {
+    color: black;
+}
+a:hover {
+    color: aqua;
+}
+a:active {
+    color: chartreuse;
+}
+
+/*   :focus - do formularza     */
+/* target dzala na kotwice , jak klikniesz link odsylajacy do diva, div robi sie w czarnej ramce*/
+input:focus {
+    border: 3px solid red;
+}
+
+div:target {
+    border: 1px solid black;
+}
+
+/*     :lang        */
+
+div:lang(pl) p {
+    color: blueviolet;
+}
+
+/*   first-child, last-child     */
+ul li:first-child a {
+    color: violet;
+}
+
+ul :last-child a {
+    color: violet;
+}
+
+/*zadziala tylko wtedy jak element ma tylko jednego potomka */
+#only-child :only-child {
+    color: brown;
+}
+/* end of type*/
+#second-ul li:nth-of-type(2) {
+    font-size: 20px;
+}
+
+/*end of type od drugiego co 3 */
+#second-ul li:nth-of-type(3n+2) {
+    font-size: 30px;
+    color: aqua;
+}
