@@ -37,18 +37,23 @@ ul li::first-letter {
 a:link {
     color: pink;
 }
+
 a:visited {
     color: black;
 }
+
 a:hover {
     color: aqua;
 }
+
 a:active {
     color: chartreuse;
 }
 
 /*   :focus - do formularza     */
+
 /* target dzala na kotwice , jak klikniesz link odsylajacy do diva, div robi sie w czarnej ramce*/
+
 /*
 input:focus {
     border: 3px solid red;
@@ -66,6 +71,7 @@ div:lang(pl) p {
 }
 
 /*   first-child, last-child     */
+
 ul li:first-child a {
     color: violet;
 }
@@ -75,15 +81,19 @@ ul :last-child a {
 }
 
 /*zadziala tylko wtedy jak element ma tylko jednego potomka */
+
 #only-child :only-child {
     color: brown;
 }
+
 /* end of type*/
+
 #second-ul li:nth-of-type(2) {
     font-size: 20px;
 }
 
 /*end of type od drugiego co 3 */
+
 #second-ul li:nth-of-type(3n+2) {
     font-size: 30px;
     color: aqua;
@@ -92,25 +102,31 @@ ul :last-child a {
 /*selektory atrybutow*/
 
 /*wszyskie inputy z atrybutem type*/
+
 input[type] {
     border: 3px solid #000;
 }
+
 /*input z atrybutem type o wartosci tel*/
+
 input[type="tel"] {
     border: 3px solid red;
 }
 
 /*dziala na input ktory ma atrybut title o wartosci w ktorej jest "input" (trzeba podac cale slowo) */
-input[title~="input"] {
+
+input[title ~ ="input"] {
     border: 3px solid blue;
 }
 
 /* lapie takiego gdzie wystepuje gdzies w slowie "rz" (nie trzeba calego slowa) */
+
 input[title*="rz"] {
     border: 3px solid green;
 }
 
 /* wartosc atrybutu title zaczyna sie od łańcucha "pie" (nie trzeba calego slowa) */
+
 input[title^="pie"] {
     border: 3px solid violet;
 }
@@ -120,6 +136,7 @@ input[title^="pie"] {
 input[title$="ci"] {
     border: 3px solid brown;
 }
+
 /*float*/
 
 .floated-inner {
@@ -128,12 +145,14 @@ input[title$="ci"] {
     background-color: red;
     float: left;
 }
+
 /*aby przywrucic float dokumenty (bo liczy wielkosc rodzica tylko z elementow oplywajacych) :
 .clear {
 clear: both; 
 (na ostatnim elemencie oplywajacym tu np <div class="clear"></div>)
 trzeba wylaczyc float - jeslil elenenty oplywajace nie oplywaja elementu do koca
 */
+
 .clear {
     clear: both;
 }
@@ -148,12 +167,23 @@ trzeba wylaczyc float - jeslil elenenty oplywajace nie oplywaja elementu do koca
     transition-property: background-color;
     transition-duration: 2s;
     transition-timing-function: ease-in-out;
-        
+
 }
 
 .transition:hover {
     background-color: green;
 }
 
+/*obrazek jako tło*/
 
-
+.background {
+    height: 500px;
+    /*    background-color: rgba(0,0,0,0.5)*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://pre00.deviantart.net/bdff/th/pre/i/2016/033/d/4/doctor_who___tardis_meets_deep_space__wallpaper__by_thedrunknown-d926rfl.jpg');
+    /*    zeby miec maske ustawiamy gradient jako od tego samego koloru do tego samego   */
+    background-repeat: no-repeat;
+    background-position: center;
+    /*    background-attachment: fixed;*/
+    background-position: center;
+    background-size: cover;
+}
