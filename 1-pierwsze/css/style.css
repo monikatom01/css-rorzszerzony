@@ -187,3 +187,19 @@ trzeba wylaczyc float - jeslil elenenty oplywajace nie oplywaja elementu do koca
     background-position: center;
     background-size: cover;
 }
+
+/*   przepełnianie elementow  */
+
+.overflow {
+    width: 300px;
+    height: 300px;
+    border: 1px dashed #000;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
