@@ -49,9 +49,11 @@ a:active {
 
 /*   :focus - do formularza     */
 /* target dzala na kotwice , jak klikniesz link odsylajacy do diva, div robi sie w czarnej ramce*/
+/*
 input:focus {
     border: 3px solid red;
 }
+*/
 
 div:target {
     border: 1px solid black;
@@ -86,3 +88,36 @@ ul :last-child a {
     font-size: 30px;
     color: aqua;
 }
+
+/*selektory atrybutow*/
+
+/*wszyskie inputy z atrybutem type*/
+input[type] {
+    border: 3px solid #000;
+}
+/*input z atrybutem type o wartosci tel*/
+input[type="tel"] {
+    border: 3px solid red;
+}
+
+/*dziala na input ktory ma atrybut title o wartosci w ktorej jest "input" (trzeba podac cale slowo) */
+input[title~="input"] {
+    border: 3px solid blue;
+}
+
+/* lapie takiego gdzie wystepuje gdzies w slowie "rz" (nie trzeba calego slowa) */
+input[title*="rz"] {
+    border: 3px solid green;
+}
+
+/* wartosc atrybutu title zaczyna sie od łańcucha "pie" (nie trzeba calego slowa) */
+input[title^="pie"] {
+    border: 3px solid violet;
+}
+
+/*wartosc atrybutu title konczy sie na "ci" (nie trzeba calego slowa)*/
+
+input[title$="ci"] {
+    border: 3px solid brown;
+}
+
