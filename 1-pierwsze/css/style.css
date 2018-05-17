@@ -1,0 +1,27 @@
+/*  selektor uniwersalny    */
+
+* {
+    color: red;
+}
+
+ul {
+    list-style: none;
+}
+
+/*    pseudo elementy:     */
+
+ul li::before {
+    content: '+';
+}
+
+ul li::after {
+    content: 'fghj';
+}
+
+ul li::first-letter {
+    color: yellow;
+}
+
+#main-header .header-inner p::first-line {
+    color: blue;
+}
