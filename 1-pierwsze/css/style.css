@@ -134,3 +134,26 @@ clear: both;
 (na ostatnim elemencie oplywajacym tu np <div class="clear"></div>)
 trzeba wylaczyc float - jeslil elenenty oplywajace nie oplywaja elementu do koca
 */
+.clear {
+    clear: both;
+}
+
+
+/*transition*/
+
+.transition {
+    width: 200px;
+    height: 200px;
+    background-color: rebeccapurple;
+    transition-property: background-color;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+        
+}
+
+.transition:hover {
+    background-color: green;
+}
+
+
+
